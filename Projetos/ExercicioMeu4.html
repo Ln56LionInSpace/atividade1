@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio para melhorar em formularios</title>
+</head>
+
+<body>
+    <!--Sistema de reservas gourmet em restaurantes italianos-->
+    <!--Deve ter local, hora e minuto de inicio, duração, pessoa que reservou, alem do id-->
+    <form action="/atividade1/htmls/ExercicioMeu4.html" enctype ="multipart/form-data" method="post" >
+        <h1>Reservas Resort Airplane</h1>
+        <label>Id:</label>
+        <input type="number" name="idReserva" class="" id="" /><br><br>
+        <label>Local:</label>
+        <input placeholder="insira o local/restaurante desejado" type="text" name="localReserva" class="" id=""
+            list="lista_restaurantes" />
+        <datalist id="lista_restaurantes">
+            <option value="La Pergola"></option>
+            <option value="Palazzo Petrucci"></option>
+            <option value="Cum Quibus"></option>
+            <option value="Enoteca Pinchiorri"></option>
+            <option value="Il Luogo di Aimo e Nadia"></option>
+        </datalist><br><br>
+        <label>Hora de inicio:</label>
+        <input type="number" name="horaDeInicio" class="" id="" /><br><br>
+        <label>Minuto de inicio:</label>
+        <input type="number" name="minutoDeInicio" class="" id="" /><br><br>
+        <label>Duração:</label>
+        <input placeholder="duração entre 30 minutos e 5 horas disponível" type="number" name="duracaoReserva" class=""
+            id="" /><br><br>
+        <label>Reservado por:</label>
+        <input placeholder="nome do contratante da reserva" type="text" name="nomeCliente" class="" id="" /><br><br>
+        <label>Crie uma senha para desbloqueio e entrada:</label>
+        <input type="password" name="senhaCliente" class="" id=""><br><br>
+        <label>Tipo de serviço:</label><br>
+        <select name="opcaoServiço" id="">
+            <option placeholder="Jantar com direito a passeio em limuzine pelo parque das rosas" value="High Value">HighValue</option>
+            <option selected placeholder="Jantar, passeio e ticket para atrações exclusivas do Teatro Roma"
+                value="Premium">Premium</option>
+            <option placeholder="Jantar, passeio, ticket e ingresso para a Peperonne Party" value="V.I.P">V.I.P</option>
+        </select><br><br>
+        <label>Quantidade de pessoas:</label><br>
+        <input type="radio" name="Opcao2Pessoas" id="" class=""> 2 pessoas
+        <input type="radio" name="Opcao3Pessoas" id="" class=""> 3 pessoas
+        <input type="radio" name="Opcao4Pessoas" id="" class=""> 4 pessoas<br><br>
+        <label>Algo extra que desejaria adicionar?</label><br>
+        <textarea name="comentarios" id="" class=""></textarea><br>
+        <input value="Enviar dados e ser feliz" type="submit" class="" id="">
+        
+    </form>
+
+</body>
+
+</html>

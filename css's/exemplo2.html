@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: salmon;
+        }
+
+        h1 {
+            color: red;
+            font-size: 45px
+        }
+        input{
+            display: block;
+            margin-bottom: 20px;
+            background-color: red;
+        }
+        label{
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .tracejado{
+            border: dashed 2px #1dde64;
+            background-color: #9acd32;
+        }
+        #caracteristicaId_email{
+            height: 45px;
+            background-color: yellowgreen;
+        }
+        #box_exemplo{
+            width: 400px;
+            height: 450px;
+            background-color: #ac23c420;
+            position: absolute;
+            top: 0px;
+            z-index: 1;
+        }
+        form{
+            display: block;
+            position: absolute;
+            z-index: 2;
+            background-color: white;
+        }
+        h2{
+            color: rgba(124, 33, 10, 0.767);
+        }
+    </style>
+</head>
+<!--Aqui usei o embarcado, que é colocado na head e edita, nesse exemplo, todas as h1 do html-->
+<!--Veja que o display: block transforma cada input em um bloco, e blocos ficam um embaixo do outro-->
+<!--O text transform uppercase faz uma transformação para que todo texto fique em maiucula-->
+<!--o font=weight: bold faz todas as letra ficarem em negrito-->
+<!--Margin bottom dá uma margemd ebaixo de cada input :)) deixa mais espaçadinho-->
+<!--Se for ver, na competição de cores, o verde que coloquei no .tracejado permanece, pois o sistema
+leva em conta com mais importancia o que foi definido EM ESPECÍFICO para uma parte-->
+<!--o uso do position e do top fazem o box roxo flutuar e sobrepor os campos-->
+<!--veja que adicionar mais 2 numeros no hexadecimal áltera a transparencia. Ou seja #00000010 é 10% de tinta preta, fica mais transparente-->
+<!--z-index é a coordenada z do plano cartesiano. voce usa para colocar elementos um em cima do outro-->
+<body>
+    <h1>Exemplo 2</h1>
+    <h2>Testando</h2>
+    <form>
+        <label>Nome:</label>
+        <input type="text" id="" class="" name="nomeUsuario">
+        <label>E-mail:</label>
+        <input type="email" id="caracteristicaId_email" class="tracejado" name="emailUsuario">
+        <label>Senha:</label>
+        <input type="password" id="" class="tracejado" name="senhaUsuario">
+    </form>
+    <div id="box_exemplo"></div>
+</body>
+
+</html>

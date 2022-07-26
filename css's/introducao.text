@@ -1,0 +1,42 @@
+Funções CSS
+- Estilizações e formatação htmls;
+- Posicionamento na tela;
+- Animações e desenhos;
+- Deixa design responsivo => site se adaptar a todos tamanho de tela;
+Três formas
+- In lign ==> aplicada direto na tag de html
+        ==> Polui muito
+        ==> Usado em situações de edição específica,
+            quando nao dá pra aproveitar a edição em outra parte do código
+- Embarcado
+- Externo
+
+Seletores, propriedades e valores
+
+- h1{color: red;}
+- h1{} é um seletor, o que seleciona
+- color é uma propriedade recebida nesse seletor
+- o valor aqui é red
+- é possível que você trabalhe duas propriedades (border color e color) dentro de um seletor só
+
+Seletores
+
+- trabalhar com eles usando:
+    - tags: body, h1, h2...
+    - classes: as vezes voce quer editar partes de forma específica
+        - você cria um nome para colocar na class e referencia ele no css com .nome{} tal como um seletor normal
+    - id: especifica estilo para um unico elemento na tela. Não pode ter dois elementos no html com mesmo id;
+        - voce referencia id com #
+
+Cores
+
+- Chamando pelo nome em inglês
+- Por código em hexadecimal (9ACD32)
+-   hexadecimal color picker no google te da todos os codigos
+- pode usar o RGB também
+    -  tem o RGBA, e o A é a transparencia que voce coloca em formato 0.30, 0.40...
+
+Margin, padding e box
+
+- box é uma caixa visual, o padding é margem interna e a margin é mais externa, a distancia do objeto das paredes da tela
+- boxes são criados ao criar blocos de divs e sections

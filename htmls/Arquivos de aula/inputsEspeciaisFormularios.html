@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs especiais</title>
+</head>
+
+<body>
+    <title>Inputs especiais para html</title><br>
+    <style>
+        section{
+            border: solid 2px #000;
+        }
+    </style>
+    <!--Acima temos um comando css-->
+    <section>
+        <h1>Inputs especiais para html</h1>
+    </section>
+    <!--sections/divs/span criam seções, partes de conteúdo que servem para facilitar edição em css e js-->
+    <!--é só substituir section por div-->
+    <!--span não pressupoe que quilo que colocares dentro dele é bloco de coteúdo. Ele é usado principalmente para formatação de texto-->
+    <!--Sections = blocos maiores/ div = blocos menores de conteudo / span = formatar texto-->
+    <!--É possivel ter uma section com varias divs dentro...forma de organização do Rafael-->
+    <hr> <!--Cria uma separação no meio, aqui-->
+    <section>
+        <label>Cor:</label>
+        <input type="color" name="cor" id="" class=""><br><br>
+        <!--selecionar cores!-->
+        <label>Data:</label>
+        <input type="date" id="" class="" name="dataAleatoria"><br><br>
+        <!--No safari(navegador do Apple) essa data é convertida para formato americano e pode gerar bugs-->
+        <label>Email:</label>
+        <input type="email" id="" class="" name="emailAleatorio"><br><br>
+        <!--navegador web nao tem diferença, mas no mobile traz facilidades de autocompletar por ex-->
+        <!--mesma coisa com o 'tel'-->
+        <label>Range:</label>
+        <input type="range" id="" class="" name="range1" min="0" max="100"><br><br>
+        <label>Busca:</label>
+        <input type="search" id="" class="" name="busca1"><br><br>
+        <!--Campo de busca com x para apagar texto escrito antes-->
+    </section>
+
+</body>
+
+</html>

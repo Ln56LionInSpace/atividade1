@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <!--Principal tag do html. Você usa para trabalhar com inputs-->
+    <!--Telas que possuem inputs de data, de texto, de botão radio, são formularios-->
+    <!--Mesmo telas so com um input (selecionar quantidade e comprar) são formularios-->
+    <!--Chatbots são formularios-->
+    <!--Formualrio tem metodo de envio, action e enctype-->
+    <!--Metodo: post ou get (enviado na propria url, pouco seguro)-->
+    <!--Action: qual pagina vai receber os dados colocados pelo usuario. para ONDE os dados vao. 
+    Geralmente tem script de backend aqui (php, python...)-->
+    <!-- enctype ="multipart/form-data", usado para colocar uma midia no site. tipo inserir imagem no formulario-->
+    <!-- Inputs basicos:
+        => text (texto)
+        => textarea (area grande de texto)
+        => radio
+        => checkbox
+        => File
+        => password
+      -- Inputs especiais
+        => Color
+        => Date
+        => entre outros (vide o arquivo inputsEspeciaisFormularios)
+    -->
+    <h1>Inputs básicos em html</h1>
+    <form action="/atividade1/htmls/formularios.html" method="post">
+        <label>Nome:</label>
+        <input placeholder="insira seu nome" type="text" name="nomeDoUsuario" class="" id="" /><br> <br>
+        <!--placeholder é uma dica para usuario preencher o campo corretamente-->
+        <!-- Veja que label expoe o nome do campo para o usuario ver, o type (que é texto) e name, que é o nome do campo para usar de variavel na manipulação  do backend-->
+        <!--o Class você reserva para a classe, usada em manipulações de css. APlicação de layout (recomendação)-->
+        <!--Id é identificador usado para javascript. Comportamento de javascript (recomendação)-->
+        <label>Senha:</label>
+        <input placeholder="insira sua senha" type="password" name="senhaDoUsuario" class="" id="" /> <br><br>
+        <!--voce nao tem fechamento pq nao tem valores entre elas. voce so tem uma tag aqui com parametros dentro-->
+        <label>Opções de vícios, meu amigo:</label>
+        <input type="radio" name="btOpcao1" class="" id="" />Drogas
+        <input type="radio" name="btOpcao2" class="" id="" />Café
+        <input type="radio" name="btOpcao3" class="" id="" />Série modinha aleatória da netflix <br> <br>
+        <label>Para a vida, você quer:</label>
+        <input type="checkbox" name="btCheckbox1" class="" id="" /> Dinheiro
+        <input type="checkbox" name="btCheckbox2" class="" id="" /> Depressão
+        <input type="checkbox" name="btCheckbox3" class="" id="" /> Um sub
+        <input type="checkbox" name="btCheckbox4" class="" id="" /> Coquinha gelada <br><br>
+        <label>Deixe a sua mensagem para o papai noel aqui:</label><br>
+        <textarea name="mensagem" id="" cols="70" rows="10"></textarea><br><br>
+        <!--Cols são colunas e rows são as linhas-->
+        <!--Veja que textarea é o unico que não tem tag input-->
+        <label>Selecione uma foto chorando:</label>
+        <input type="file" name="arquivoDoUsuario" class="" id=""><br><br>
+        <label>Selecione seu rótulo social:</label>
+        <select name="opcaoRotuloSocial" id="" class ="">
+            <option value="">Seleciona logo</option> <!--Boa pratica-->
+            <option value="Skatista">Skatista</option>
+            <option value="Petista">Petista</option>
+            <option value="Bolsonarista">Bolsonarista</option>
+            <option value="Eletricista">Eletricista</option>
+            <option value="Esteticista">Esteticista</option>
+            <option value="Normie">Normie</option>
+        </select><br><br>
+        <!--Veja que a select nao tem input, mas varias options com valores diferentes-->
+        <!--Usuario TEM que escolher uma daquelas opções, não tem outras disponíveis-->
+        <!--Existe aquela tecnica de colocar o Selecione com valor nulo (1a linha) para orientar usuario-->
+        <label>Selecione um anime aí :) </label>
+        <select name="opcaoTeste" id="" class ="">
+            <option selected value="Valor pre-selecionado">Akame Ga Kill</option>
+            <option value="Valor qualquer 1">Fullmetal Alchemist</option>
+            <option value="Valor qualquer 2">Code Geass</option>
+        </select><br><br>
+        <!--Veja que a pre selecao deixa uma opcao...pre selecionada :)-->
+        <label>Marcas de carro:</label>
+        <select name="opcaoCarro" id="" class ="">
+            <optgroup label="Alemaes:"> 
+                <!--Grupo de opções, aqui-->
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </optgroup>
+            <optgroup label="Italianos:">
+                <option value="macerati">Macerati</option>
+                <option value="fiat">Fiat</option>
+            </optgroup>
+        </select>
+        <!--Buttons precisam de JS para funcionarem , mas o submits ja tem comportamento padrao vindo do html-->
+        <!--Submit submete dados a uma pagina backend-->
+        <input type="button" value="Botão sem ação" />
+        <!--tags sem valor entre duas componentes de tag podem receber o valor, coisa escrita dentro do seu unico componente-->
+        <input type="submit" value="Enviar"><br><br>
+        <!--faz post/envio do formulario para a pagina de destino que coloquei no action do form-->
+        <label>Time do coração:</label>
+        <input placeholder="insira seu time" name="timeDoUsuario" type="text" class="" id="" list="lista_times">
+        <datalist id="lista_times">
+            <option value="Palmeiras">Palmeiras</option>
+            <option value="Santos">Santos</option>
+            <option value="Curintia">Curintia</option>
+            <option value="Inter">Inter</option>
+        </datalist>
+        <!--Veja que eu crio um autocomplete por meio da datalist. EU listo options normalmente e uso um id para identificar a lista e referenciar ela dentro do meu input de texto-->
+        <!--Select so pode escolher a opções dele. O datalist só sugere, e você pode digitar o que quiser-->
+    </form>
+</body>
+
+</html>
+<!--Veja que você deve usar o value com nome que aparece apenas nas options dentro de selects-->
+<!--O mesmo acontece nos botões e submits. São criados por inputs e os textos deles ficam dentro dos values-->
+<!--Selects e textarea não tem " 'type=""' " pq eles já são os prorios tipos de inputs-(as tags são eles->
+<!-Placeholder pode ser add em qualquer tipo de input->
+<!-O datalist é criado como se fosse uma selected com um id, com varias options. Depois eu ligo esse id a um input qualquer colocando o "list" deentro desse input->
+<!-Cada botao radio é um input isolado->

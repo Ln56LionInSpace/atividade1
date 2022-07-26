@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+</head>
+
+<body>
+    <h1>Tabelas em html!</h1>
+    <h2>Exemplo de tabela implicita, sem tHead</h2>
+    <table cellpadding="10" border="1" width="1000">
+        <tr bgcolor="yellow">
+            <!--Background color-->
+            <!-- Table row, linha da tabela. o border é pra ter separação entre colunas-->
+            <td align="center" width="10%">#ID</td> <!-- Table d, coluna da tabela-->
+            <td align="center" width="20%">Projeto</td>
+            <td align="center" width="10%">Titulo</td>
+            <td align="center" width="20%">Status</td>
+            <td align="center" width="10%">Comentarios</td>
+        </tr>
+        <!--ALign serve para alinhar os elemntos de cada coluna ali. no caso, ao centro-->
+        <!--Veja que, acima, temos uma separação de tamanho por porcentagem do width da tabela (1000)-->
+        <!--Caso voce definisse uma largura em porcentagem diferente para as de baixo, o html iria ignorar tudo-->
+        <tr>
+            <td align="center">1</td>
+            <td align="center">Projeto conquistar o coração de uma menina</td>
+            <td align="center">Mariane Kusskuss</td>
+            <td align="center">Fracasso</td>
+            <td align="center">Mora em outra cidade...</td>
+        </tr>
+        <tr>
+            <td align="center">2</td>
+            <td align="center">Projeto codar</td>
+            <td align="center">Codificar em web e mobile</td>
+            <td align="center"> Aprendendo. Ir aprendendo gestão também para melhorar meu serviço e depois saltar para
+                programação com
+                bagagem para ser executivo</td>
+            <td align="center">Vai dar certo. Continua!!</td>
+        </tr>
+    </table>
+    <h2>Exemplo de tabela explicita, usando tHead E tBody</h2>
+    <!--tHead facilita na hora de vocÊ trabalhar com css para ele identificar as partes e editar-->
+    <table cellpadding="10" cellspacing="10" border="1" width="1000">
+        <!--cellpadding é a distancia de letras para a borda da celula, e é determinada em pixels-->
+        <thead>
+            <tr>
+                <!--aqui, no cabeçalho, bota o significado de cada coluna...-->
+                <!-- cellspacing é espaço entre células-->
+                <td align="center" width="10%">#ID</td> <!-- Table d, coluna da tabela-->
+                <td align="center" width="20%">Projeto</td>
+                <td align="center" width="10%">Titulo</td>
+                <td align="center" width="20%">Status</td>
+                <td align="center" width="10%">Comentarios</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="center">3</td>
+                <td align="center">Investir em CRM ou ERP?</td>
+                <td align="center"> Resposta: os dois!</td>
+                <td align="center">Ativo</td>
+                <td align="center">KKKKKKK</td>
+            </tr>
+            <tr>
+                <td align="center">3</td>
+                <td align="center"> Investir em CRM ou ERP?</td>
+                <td align="center">Resposta: os dois!</td>
+                <td align="center">Ativo</td>
+                <td align="center">KKKKKKK</td>
+            </tr>
+            <tr>
+                <td align="center">3</td>
+                <td align="center">Investir em CRM ou ERP?</td>
+                <td align="center"> Resposta: os dois!</td>
+                <td align="center">Ativo</td>
+                <td align="center">KKKKKKK</td>
+            </tr>
+            <tr>
+                <td align="center">3</td>
+                <td align="center"> Investir em CRM ou ERP?</td>
+                <td align="center">Resposta: os dois!</td>
+                <td align="center">Ativo</td>
+                <td align="center">KKKKKKK</td>
+        </tbody>
+    </table>
+    <h2>Nova tabela para explicar colspan</h2>
+    <table cellpadding = "10" cellspacing = "10" border="1" width="1000">
+        
+        <thead>
+            <tr>
+                <td align="center" width="10%">#ID</td> 
+                <td align="center" colspan = "2" width="30%">Projeto</td>
+                <!-- Note que tirei o Titulo e coloquei a porcentagem dele no Projeto-->
+                <!-- O colspan agr sinaliza que a colina Projeto deve ocupar espaço de duas colunas normais-->
+                <td align="center" width="20%">Status</td>
+                <td align="center" width="10%">Comentarios</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="center" >3</td>
+                <td align="center" >Investir em CRM ou ERP?</td>
+                <td align="center" >Resposta: os dois!</td>
+                <td align="center" >Ativo</td>
+                <td align="center" >KKKKKKK</td>
+            </tr>
+            <tr>
+                <td align="center" >3</td>
+                <td align="center" > Investir em CRM ou ERP?</td>
+                <td align="center" >Resposta: os dois!</td>
+                <td align="center" >Ativo</td>
+                <td align="center" >KKKKKKK</td>
+            </tr>
+            <tr>
+                <td align="center" >3</td>
+                <td align="center" >Investir em CRM ou ERP?</td>
+                <td align="center" >Resposta: os dois!</td>
+                <td align="center" >Ativo</td>
+                <td align="center" >KKKKKKK</td>
+            </tr>
+            <tr>
+                <td align="center" >3</td>
+                <td align="center" > Investir em CRM ou ERP?</td>
+                <td align="center" >Resposta: os dois!</td>
+                <td align="center" >Ativo</td>
+                <td align="center" >KKKKKKK</td>
+            </tr>
+            <tr>
+                <td align="center"><a href="/htmls/MeusExercicios.html">Link meus exercicios</a></td>
+                <td align="center"><a href="Links.html" target = "_blank">Voltar para os links de navegação</a></td>
+                <td align="center">Comida</td>                
+                <td align="center">Comida</td>
+                <td align="center">Comida</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
