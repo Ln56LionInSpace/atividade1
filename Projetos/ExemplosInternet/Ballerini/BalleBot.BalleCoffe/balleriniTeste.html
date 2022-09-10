@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ballerini de olhos fechados</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala&display=swap');
+        html {
+            background: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%);
+        }
+
+        .cabecalho {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            padding: 12px;
+        }
+
+        .cabecalho-item {
+            font-family: 'Sarala', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            color: #FFF2E7;
+        }
+
+        /*NOS MICRO BLOCOS PODE USAR FLEX, MAS COM GAP PARA DAR MICRO ESPAÇAMENTOS*/
+        .cabecalho-menu {
+            display: flex;
+            gap: 32px;
+        }
+
+        .cabecalho-item {
+            text-decoration: none;
+        }
+
+        .conteudo {
+            margin-bottom: 48px;
+            border-top: 0.4px solid #FFF2E7;
+        }
+
+        .conteudo-principal {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .conteudo-principal-escrito-titulo {
+            font-family: 'Righteous', cursive;
+            color: #FFF2E7;
+            font-weight: 400;
+            font-size: 32px;
+        }
+        .conteudo-principal-escrito-descricao{
+            font-family: 'Sarala', sans-serif;
+            font-style: normal;
+            font-size: 24px;
+            font-weight: 400;
+            color:#FFF2E7;
+        }
+        .conteudo-principal-escrito-botao{
+            color: #FFF2E7;
+            background-color: #2F2325;
+            font-weight: 400;
+            font-family: 'Sarala',sans-serif;
+            font-size: 24px;
+            border-radius: 15px;
+            width: 200px;
+            height: 65px;
+        }
+        .conteudo-principal-escrito-botao:hover{
+            background-color: #FFF2E7;
+            color:#2F2325;
+        }
+        .conteudo-principal-imagem-coffee-ballerini {
+            width: 380px;
+        }
+
+        .conteudo-secundario {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .conteudo-secundario-escrito-titulo{
+            border-top: 0.4px solid #FFF2E7;
+            padding-top: 24px;
+            color: #FFF2E7;
+            font-family: 'Righteous', sans-serif;
+            font-weight: 400;
+        }
+        .conteudo-secundario-escrito-item{
+            color:#ECD6C4;
+            font-family: 'Sarala', sans-serif;
+            font-size: 18px;
+        }
+        .rodape {
+            padding: 32px;
+            border-top: 0.4px solid #FFF2E7;
+        }
+
+        /*ERRO: EU TENTEI COLOCAR A CONFIGURAÇÃO DE BAIXO NO .RODAPE. MAS NAO FAZ SENTIDO, PQ ELE ENGLOBA TUDO, A EDICAO QUEM TEM QUE PEGAR É A IMAGEM*/
+        .rodape-imagem {
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <img class="cabecalho-logo" src="./Vector.svg" alt="#logo">
+        <!--Usei para UL, mas a Ballerini usou nav-->
+        <nav class="cabecalho-menu">
+            <a class="cabecalho-item" href="">Comunidade Ballerini</a>
+            <a class="cabecalho-item" href="">Localização</a>
+            <a class="cabecalho-item" href="">Trabalhe conosco!</a>
+            <a class="cabecalho-item" href="">Sobre nós</a>
+        </nav>
+    </header>
+    <!--Errei ao nao colocar "conteudo" como class da main-->
+    <main class="conteudo">
+        <section class="conteudo-principal">
+            <div class="conteudo-principal-escrito">
+                <h1 class="conteudo-principal-escrito-titulo">Café Ballerini</h1>
+                <h3 class="conteudo-principal-escrito-descricao">Deixe a sua tarde mais gostosa com nossos cafés, doces
+                    e salgados!</h3>
+                <button class="conteudo-principal-escrito-botao">Pedir agora</button>
+            </div>
+            <!--Errei ao colocar div rodeando a imagem. tirei-->
+            <img class="conteudo-principal-imagem-coffee-ballerini" src="./coffee-26.svg" alt="#ballebot">
+        </section>
+        <section class="conteudo-secundario">
+            <!--Outra div desnecessaria, tirei ela-->
+            <h3 class="conteudo-secundario-escrito-titulo">O que fazemos para que você tenha a melhor
+                experiência:</h3>
+            <p class="conteudo-secundario-escrito-item">1. Ótima localização: estamos próximos a três dos mais lindos parques da cidade! </p>
+            <p class="conteudo-secundario-escrito-item">2. Atendimento personalizado: profissionais capacitados para te atender. Pedir para entrega é ótimo, mas nos visitar será surpreendente! </p>
+            <p class="conteudo-secundario-escrito-item">3. Produtos de alta qualidade: as melhores técnicas francesas a serviço do seu paladar :) </p>
+        </section>
+    </main>
+    <footer class="rodape">
+        <img class="rodape-imagem" src="./BALLERINI.svg" alt="">
+    </footer>
+</body>
+
+</html>
+<!--Uma licao: se o header, main ou footer tiver so um bloco de texto ou uma imagem, não precisa de div separando-->

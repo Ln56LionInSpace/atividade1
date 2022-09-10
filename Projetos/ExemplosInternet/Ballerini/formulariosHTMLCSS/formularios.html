@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--porque esse media? nao sei...deve ser algo sobre a responsividade-->
+    <style>
+        /*astericsco seleciona toos os campos da pagina!*/
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            height: 750px;
+        }
+
+        #testeTitulo {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        #titulo {
+            padding-top: 20px;
+            font-family: sans-serif;
+            color: #380061;
+            margin-bottom: 20px;
+        }
+
+        #subtitulo {
+            font-family: sans-serif;
+            color: #380061;
+            margin-bottom: 20px;
+        }
+
+        fieldset {
+            border: 0;
+        }
+
+        body {
+            background-color: #F0F8FF;
+            font-family: sans-serif;
+            font-size: 1em;
+            color: #59429D;
+            justify-content: center;
+        }
+
+        /*EU CONSEGUI! EU TIREI OS MARGIN LEFT E MARGIN TOP QUE TAVAM NO BODY E FIZ 
+        UMA MANIPULACAO COM FORM: APLICQUEI O BLOCK/MARGIN AUTO PARA CENTRALIZAR!*/
+        form {
+            width: 400px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        input,
+        select,
+        textarea,
+        button {
+            border-radius: 5px;
+        }
+
+        .campo {
+            margin-bottom: 1em;
+        }
+
+        .campo label {
+            color: #59429D;
+            display: block;
+            margin-bottom: 0.2em;
+        }
+
+        /*O FLOAT...MEIO QUE AJUSTOU O NOME E SOBRENOME PRA FICAREM UM DO LADO OUTRO*/
+        fieldset.grupo .campo {
+            float: left;
+            margin-right: 1em;
+        }
+
+        .campo input [type="text"],
+        .campo input [type="email"],
+        .campo select,
+        .campo textarea {
+            padding: 0.2em;
+            border: 1px solid #59429D;
+        }
+
+        .campo select option {
+            padding-right: 1em;
+        }
+
+        /*EFEITO PARA QUANDO VOCE CLICAR E DIGITAR NO CAMPO*/
+        .campo input:focus,
+        .campo select:focus,
+        .campo textarea:focus {
+            background: #E0E0F8;
+        }
+
+        #botao {
+            width: 130px;
+            height: 40px;
+            font-size: 1.2em;
+            background: #59429D;
+            border: 0;
+            margin-bottom: 1em;
+            padding: 1 em;
+            color: #ffffff;
+            position: absolute;
+            top: 100%;
+            left: 48%;
+            margin-right: -50%;
+            transform: translate (-50%, -50%);
+        }
+
+        #botao:hover {
+            background: #CCBBFF;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+            text-shadow: none;
+        }
+
+        #check {
+            display: inline-block;
+        }
+    </style>
+    <title>Formulario de alguém</title>
+</head>
+
+<body>
+    <div id="testeTitulo">
+        <h1 id="titulo">Cadastro de devs do time CodeMiner42</h1>
+        <p id="subtitulo">Complete com seus dados:</p><br>
+    </div>
+    <form>
+        <!--Esse fieldset junta os dois campos (no caso, divs) que estão dentro dele. Junta no sentido de fazer um quadrado juntando-->
+        <!--Required significa que é input obrigatorio para usuario-->
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="nome"><strong>Nome:</strong></label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+            <div class="campo">
+                <label for="sobrenome"><strong>Sobrenome:</strong></label>
+                <input type="text" name="sobrenome" id="sobrenome" required>
+            </div>
+        </fieldset>
+        <div class="campo">
+            <label for="email"><strong>E-mail:</strong></label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div class="campo">
+            <label for="devweb"><strong> De qual lado da aplicação você codifica?</strong></label>
+            <!--Checked serve para pré-escolher a oç~~ao ao começar a pagina-->
+            <label>
+                <input type="radio" name="devweb" value="frontEnd" checked>Front-end
+            </label>
+            <label>
+                <input type="radio" name="devweb" value="backEnd">Back-end
+            </label>
+            <label>
+                <input type="radio" name="devweb" value="fullStack">Full-stack
+            </label>
+        </div>
+        <div class="campo">
+            <!--Veja que eu criei uma opção "selected" disabled (porque não quero que esteja selecionada) e sem value para não equivaler a nadase estiver selecionada-->
+            <label for="senioridade"><strong>Senioridade:</strong></label>
+            <select id="senioridade">
+                <option selected disabled value="">Selecione</option>
+                <option value="Junior">Júnior</option>
+                <option value="Pleno">Pleno</option>
+                <option value="Senior">Sênior</option>
+            </select>
+        </div>
+        <fieldset class="grupo">
+            <div id="check">
+                <label><strong>Selecione as tecnologias que você domina:</strong></label><br><br>
+                <input type="checkbox" name="tecnologia1" id="tecnologia1" value="HTML">
+                <label for="tecnologia1">HTML</label>
+                <input type="checkbox" name="tecnologia2" id="tecnologia2" value="CSS">
+                <label for="tecnologia2">CSS</label>
+                <input type="checkbox" name="tecnologia3" id="tecnologia3" value="JavaScript">
+                <label for="tecnologia3">JavaScript</label>
+                <input type="checkbox" name="tecnologia4" id="tecnologia4" value="PHP">
+                <label for="tecnologia4">PHP</label>
+                <input type="checkbox" name="tecnologia5" id="tecnologia5" value="C#">
+                <label for="tecnologia5">C#</label>
+                <input type="checkbox" name="tecnologia6" id="tecnologia6" value="Python">
+                <label for="tecnologia6">Python</label>
+                <input type="checkbox" name="tecnologia7" id="tecnologia7" value="Java">
+                <label for="tecnologia7">Java</label>
+            </div>
+        </fieldset>
+        <div class="campo">
+            <br>
+            <label for="experiencia"><strong>Conte um pouco da sua experiência:</strong></label>
+            <textarea name="experiencia" id="experiencia" style="width: 26em" rows="6"></textarea>
+        </div>
+        <button id="botao" type="submit">Concluído</button>
+    </form>
+</body>
+
+</html>

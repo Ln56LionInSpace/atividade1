@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>https://cliente.americanas.com.br/minha-conta/cadastro?next=https://www.americanas.com.br/</title>
+    <style>
+        /*
+        - leia: comece fazendo só uma linhazinha, vai. (x) (x) (x)
+        - colocar explicações embaixo dos campos. (x)
+        - deixas os espaços de inserção de dados bonitos. (x)
+        - ajustar os asteriscos em cada nome. (x)
+        - mais ajustes finos = hover, digitação no campo, espaçamento,
+         iconezinhos de visão
+        - responsividade.
+        */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 1650px;
+        }
+
+        .faixa-vermelha {
+            display: flex;
+            margin: 0;
+            background-color: rgb(248, 0, 50);
+            height: 85px;
+        }
+
+        #logo {
+            display: flex;
+            align-self: center;
+            width: 210px;
+            margin-left: 68px;
+            margin-top: -2px;
+        }
+
+        /*responsavel pelo alinhamento de todos os "componente"*/
+        .componente {
+            display: flex;
+            flex-direction: column;
+            margin-left: 470px;
+            margin-bottom: 1px;
+            gap: 1px;
+        }
+
+        /*div que envolve o barrinha e o "fraca"*/
+        #apoio-senha {
+            display: flex;
+            flex-direction: row;
+            margin-left: 470px;
+            gap: 10px;
+        }
+
+        /*barrinha em si*/
+        #barrinha {
+            width: 208px;
+            height: 4px;
+            background-color: rgb(153, 153, 153, 0.4);
+        }
+
+        /*componentes barrinha e paalvra "fraca"*/
+        #componente-barrinha-descricao {
+            display: flex;
+            margin-top: -8px;
+            color: rgb(102, 102, 102);
+        }
+
+        .cabecalho {
+            border: none;
+            display: flex;
+            gap: 18px;
+            flex-direction: column;
+            padding-top: 85px;
+            text-align: center;
+        }
+
+        .cabecalho-titulo {
+            color: rgb(102, 102, 102);
+            font-family: Arial;
+            font-size: 36px;
+            font-weight: bold;
+            height: 41px;
+            text-transform: lowercase;
+        }
+
+        .cabecalho-observacao {
+            display: flex;
+            align-self: center;
+            text-transform: lowercase;
+            max-width: 611px;
+            font-size: 18px;
+            color: rgb(102, 102, 102);
+            font-family: Arial;
+        }
+
+        .obs-com-asterisco {
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+        }
+
+        .cabecalho-observacao-menor {
+            font-family: Arial;
+            font-size: 12px;
+            text-transform: lowercase;
+            color: rgb(51, 51, 51);
+            display: flex;
+            margin-top: -2.5px;
+        }
+
+        .asterisco {
+            font-size: 16px;
+            color: rgb(252, 13, 27);
+            display: flex;
+            margin-top: -8px;
+        }
+
+        #asterisco-nome {
+            display: flex;
+            font-size: 16px;
+            color: rgb(252, 13, 27);
+            margin-top: -8px;
+        }
+
+        #asterisco-genero {
+            display: flex;
+            font-size: 16px;
+            color: rgb(252, 13, 27);
+            margin-top: -8px;
+        }
+
+        #asterisco-data-de-nascimento {
+            display: flex;
+            font-size: 16px;
+            color: rgb(252, 13, 27);
+            margin-top: -8px;
+        }
+
+        #asterisco-cpf {
+            display: flex;
+            font-size: 16px;
+            color: rgb(252, 13, 27);
+            margin-top: -8px;
+        }
+
+        #asterisco-telefone {
+            display: flex;
+            font-size: 16px;
+            color: rgb(252, 13, 27);
+            margin-top: 1px;
+        }
+
+        #asterisco-email {
+            display: flex;
+            font-size: 16px;
+            color: rgb(252, 13, 27);
+            margin-top: 25px;
+        }
+
+        #asterisco-senha {
+            display: flex;
+            font-size: 16px;
+            color: rgb(252, 13, 27);
+            margin-top: 25px;
+        }
+
+        /*labels*/
+
+        #label-genero {
+            display: flex;
+            margin-left: 1px;
+            margin-top: -4px;
+            font-size: 1rem;
+            text-transform: lowercase;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 4px;
+            color: rgb(102, 102, 102);
+        }
+
+        #label-data-nascimento {
+            display: flex;
+            margin-left: 1px;
+            margin-top: -4px;
+            font-size: 1rem;
+            text-transform: lowercase;
+            font-family: Arial, Helvetica, sans-serif;
+            min-width: 160px;
+            color: rgb(102, 102, 102);
+        }
+
+        #label-cpf {
+            display: flex;
+            margin-left: 477px;
+            margin-top: -12px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(102, 102, 102);
+        }
+
+        #label-telefone {
+            display: flex;
+            margin-left: 1px;
+            margin-top: -4px;
+            font-size: 1rem;
+            text-transform: lowercase;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 6px;
+            color: rgb(102, 102, 102);
+        }
+
+        #label-email {
+            display: flex;
+            margin-top: 30px;
+            margin-left: 1px;
+            font-size: 1rem;
+            text-transform: lowercase;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(102, 102, 102);
+        }
+
+        #label-senha {
+            display: flex;
+            margin-top: 30px;
+            margin-left: 1px;
+            text-transform: lowercase;
+            font-family: 'Arial';
+            color: rgb(102, 102, 102);
+        }
+
+
+        #label-nome-completo {
+            display: flex;
+            margin-left: 1px;
+            margin-top: -5px;
+            font-size: 1rem;
+            text-transform: lowercase;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(102, 102, 102);
+        }
+
+        /*alinhamento de titulos*/
+        .campo label {
+            display: flex;
+            flex-direction: column;
+            max-width: 140px;
+            margin-left: 470px;
+        }
+
+        span {
+            display: inline-block;
+            margin-left: 470px;
+        }
+
+        .mini-explicacao {
+            font-family: 'Arial';
+            text-transform: lowercase;
+            color: rgb(153, 153, 153);
+            font-size: 0.875rem;
+            padding-top: 4px;
+            padding-bottom: 6px;
+        }
+
+        .campo input {
+            margin-bottom: 20px;
+        }
+
+        /*campo de compartilhamento de dados*/
+        #compartilhar-dados {
+            width: 400px;
+            height: 40px;
+            font-family: 'Arial';
+            font-size: 1rem;
+            color: rgb(102, 102, 102);
+            margin-bottom: 25px
+        }
+
+        #compartilhar-dados a {
+            text-decoration: none;
+            color: rgb(102, 102, 102);
+            text-decoration: underline;
+        }
+
+        #botao {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 25px;
+            margin-top: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 35px;
+        }
+
+
+        #opcao-genero {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            text-transform: lowercase;
+            font-family: 'Arial';
+            margin-top: 4px;
+            color: rgb(102, 102, 102);
+            margin-bottom: 10px;
+        }
+
+        #rodape {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .obs {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            width: 470px;
+            text-align: center;
+            gap: 15px;
+            color: rgb(102, 102, 102);
+            font-size: 1rem;
+            font-family: 'Arial';
+        }
+
+        #notificacoes-whats {
+            font-family: 'Arial';
+            font-size: 1rem;
+            color: rgb(102, 102, 102);
+        }
+
+        #emails-promocionais {
+            font-family: 'Arial';
+            font-size: 1rem;
+            color: rgb(102, 102, 102);
+        }
+
+        #botao {
+            width: 234px;
+            height: 48px;
+            border: solid 1px rgb(248, 0, 50);
+            background-color: rgb(248, 0, 50);
+            color: rgb(255, 255, 255);
+            border-radius: 3px;
+            font-weight: bold;
+            font-family: 'Arial';
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        /*Inputs*/
+
+        #input-nome {
+            height: 47.5px;
+            border-radius: 8px;
+            border: solid 1px rgb(103, 103, 103);
+            width: 398px;
+            margin-top: 8px;
+            margin-bottom: 30px;
+        }
+
+        #input-date {
+            height: 47.5px;
+            border-radius: 8px;
+            border: solid 1px rgb(103, 103, 103);
+            width: 113px;
+            margin-top: 8px;
+            margin-bottom: 30px;
+        }
+
+        #input-email {
+            height: 47.5px;
+            border-radius: 8px;
+            border: solid 1px rgb(103, 103, 103);
+            width: 397px;
+            margin-top: 8px;
+        }
+
+        #input-telefone {
+            height: 47.5px;
+            border-radius: 8px;
+            border: solid 1px rgb(103, 103, 103);
+            width: 151px;
+            margin-top: 8px;
+        }
+
+        #input-cpf {
+            height: 47.5px;
+            border-radius: 8px;
+            border: solid 1px rgb(103, 103, 103);
+            width: 150px;
+            margin-top: 8px;
+        }
+
+        #input-senha {
+            height: 47.5px;
+            border-radius: 8px;
+            border: solid 1px rgb(103, 103, 103);
+            width: 258px;
+            margin-top: 8px;
+        }
+
+        #info-cnpj {
+            font-family: 'Arial';
+            text-decoration: none;
+            color: rgb(102, 102, 102);
+            text-decoration: underline;
+            margin-bottom: 25px;
+        }
+
+        .obs a {
+            text-decoration: none;
+            color: rgb(102, 102, 102);
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .obs p{
+            margin-bottom: 15px;
+        }
+
+        .opcao-genero-radio {
+            width: 22.5px;
+            height: 22.5px;
+        }
+        .texto-email{
+            margin-left: 1px;
+        }
+        .texto-whats{
+            margin-left: 1px;
+        }
+        .texto-compartilhamento-geral{
+            margin-left: 16px;
+            margin-top: -18px;
+        }
+        .checkbox-compartilhamento-geral{
+            margin-top:20px;
+        }
+        .olho-senha{
+            position: absolute;
+            width: 30px;
+            margin-top:49px;
+            margin-left:9px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="faixa-vermelha">
+        <img id="logo" src="./USEESSA.png" alt="#logoAmericanas">
+    </header>
+    <main>
+        <fieldset class="cabecalho">
+            <h1 class="cabecalho-titulo">criar seu cadastro</h1>
+            <p class="cabecalho-observacao">veja seus pedidos de forma fácil, compre mais rápido e tenha uma experiência
+                personalizada :)</p>
+            <div class="obs-com-asterisco">
+                <p class="asterisco">*</p>
+                <p class="cabecalho-observacao-menor">campos obrigatórios</p>
+            </div>
+        </fieldset>
+        <form action="">
+            <div class="campo">
+                <div class="obs-com-asterisco">
+                    <label id="asterisco-nome">*</label>
+                    <label for="nome" class="componente" id="label-nome-completo">nome completo:</label>
+                </div>
+                <input type="text" class="componente" name="nome" id="input-nome">
+            </div>
+            <div class="campo">
+                <div class="obs-com-asterisco">
+                    <label id="asterisco-genero">*</label>
+                    <label for="genero" id="label-genero">gênero:</label>
+                </div>
+                <span class="mini-explicacao">pra gente te conhecer um pouquinho melhor :)</span>
+                <!--colocar o "name" tudo igual ajuda a deixar so uma opção selecionada-->
+                <span id="opcao-genero">
+                    <input type="radio" name="genero" value="masculino" class="opcao-genero-radio">masculino 
+                    <input type="radio" name="genero" value="feminino" class="opcao-genero-radio">feminino
+                    <input type="radio" name="genero" value="naoInformar" class="opcao-genero-radio">nao informar
+                </span>
+            </div>
+            <div class="campo">
+                <div class="obs-com-asterisco">
+                    <label id="asterisco-data-de-nascimento">*</label>
+                    <label for="dataDeNascimento" class="componente" id="label-data-nascimento">data de
+                        nascimento:</label>
+                </div>
+                <span class="mini-explicacao">necessário pra identificar a maioridade, no formato DD/MM/AAAA</span>
+                <input type="text" class="componente" name="dataDeNascimento" id="input-date">
+            </div>
+            <div class="campo">
+                <div class="obs-com=asterisco">
+                    <label id="asterisco-cpf">*</label>
+                    <label for="cpf" class="componente" id="label-cpf">CPF:</label>
+                </div>
+                <span class="mini-explicacao"> necessário pra emissão das Notas Fiscais</span>
+                <input type="text" class="componente" name="cpf" id="input-cpf">
+                <a href="" class="componente" id="info-cnpj">é pessoa jurídica? conheça o americanas empresas</a>
+            </div>
+            <div class="campo">
+                <div class="obs-com-asterisco">
+                    <label id="asterisco-telefone">*</label>
+                    <label for="telefone" class="componente" id="label-telefone">telefone:</label>
+                </div>
+                <span class="mini-explicacao">caso a gente precise entrar em contato sobre seus pedidos</span>
+                <input type="tel" class="componente" name="telefone" id="input-telefone">
+                <span id="notificacoes-whats">
+                    <input class="checkbox-whats" type="checkbox"> 
+                    <span class="texto-whats"> receber notificações por WhatsApp</span>
+                </span>
+            </div>
+            <div class="campo">
+                <div class="obs-com-asterisco">
+                    <label id="asterisco-email">*</label>
+                    <label for="email" class="componente" id="label-email">e-mail</label>
+                </div>
+                <input type="email" class="componente" name="email" id="input-email">
+                <span id="emails-promocionais">
+                    <input class="checkbox-email" type="checkbox">
+                     <span class="texto-email">enviar e-mails
+                        promocionais</span>
+                </span>
+            </div class="campo">
+            <div class="campo">
+                <div class="obs-com-asterisco">
+                    <label id="asterisco-senha">*</label>
+                    <label for="senha" class="componente" id="label-senha">senha:</label>
+                </div>
+                <span class="mini-explicacao">precisa ter entre 6 e 20 caracteres</span>
+                <img class="olho-senha"src="./olho-senha.png" alt="">
+                <input type="password" class="componente" name="senha" id="input-senha">
+            </div>
+            <div id="apoio-senha">
+                <div id="barrinha" class="componente-barrinha">
+
+                </div>
+                <label id="componente-barrinha-descricao" for="">fraca</label>
+                <img id="componente-barrinha-imagem" class="componente-barrinha"></img>
+            </div>
+            <div class="checkbox">
+                <span id="compartilhar-dados">
+                    <input class="checkbox-compartilhamento-geral" type="checkbox">
+                    <span class="texto-compartilhamento-geral"> 
+                        compartilhar meus dados com parceiros para ter conteúdos
+                        personalizados, veja
+                        <a id="link-como-funciona-compartilhamento" href="">como
+                            funciona.</a>
+                    </span>
+                </span>
+            </div>
+            <button id="botao" type="submit">criar seu cadastro</button>
+        </form>
+    </main>
+    <footer id="rodape">
+        <div class="obs">
+            <p>Não se preocupe, nosso site é seguro! Ao criar o seu cadastro, você concorda com a nossa <a
+                    href="">Política de Privacidade</a></p>
+            <p>já tem cadastro? <a href="">entrar</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

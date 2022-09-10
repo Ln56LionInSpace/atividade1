@@ -1,0 +1,22 @@
+/*isso é para impressora*/
+@charset "UTF-8";
+
+*{
+    padding: 10px;
+    margin: 10px;
+}
+
+html{
+    font-family: 'Courier New', Courier;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+menu{
+    display: none; /*quando eu imprimir, não quero que menu apareça*/
+}
+article::after{ /*isso serve para você colocar conteudo apos (after) o final da tag article*/
+    content: "documento impresso via site www.cursoemvideo.com";
+}
+article{
+    width: 100%; /*ocupa todo o espaço do papel na impressora*/
+}

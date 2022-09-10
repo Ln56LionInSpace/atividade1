@@ -1,0 +1,50 @@
+#linha1{
+    display: flex;
+    flex-direction: row;
+    background-color: #FFF;
+    height: 300px;
+    justify-content: space-evenly;
+}
+#linha1>div{
+    width: 25%;
+    background-color: aquamarine;
+    padding: 1%;
+    height: 200px;
+    align-self: center;
+}
+#noticia1:hover{
+    height: 250px;
+    background-color: tomato;
+}
+#noticia1{
+    transition: height 0.1s;
+}
+#noticia2:hover{
+    height: 250px;
+    background-color: tomato;
+}
+#noticia2{
+    transition: height 0.1s;
+}
+/*HOVER É O GATILHO QUE É LIGADO A TRANSIÇÃO DEPOIS*/
+#noticia3:hover{
+    height: 250px;
+    background-color: tomato;
+}
+
+#noticia3{
+    transition: height 0.1s;
+}
+button{
+    border: 0px;
+    border-radius: 20px 0px 20px 0px;
+    background-color: yellowgreen;
+    padding: 20px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: yellow;
+}
+button{
+    transition: height 0.1s;
+}

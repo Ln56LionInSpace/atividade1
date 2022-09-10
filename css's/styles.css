@@ -1,0 +1,46 @@
+/*STATIC*/
+div{
+    height: 50px;
+    background-color: #CCC;
+    border: solid 1px black;
+    padding: 10px;
+}
+
+/*RELATIVE: uma fixa e outra, veja, consigo reposicionar conforme referencia da tela*/
+.relative-alterada{
+    top: 20px;
+    left: 20px;
+}
+.relative{
+    background-color: #321;
+    position: relative;
+    color: #fff;
+}
+/*ABSOLUTE*/
+.absolute{
+    background-color: #914;
+    height: 25px;
+    width: 75px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+html{
+    padding-bottom: 1000px;
+}
+.fixed{
+    height: 50px;
+    width: 50px;
+    background-color:aqua;
+    position: fixed;
+    top: 20px;
+    left: 400px;
+}
+
+.sticky{
+    position:sticky;
+    background-color: #089;
+    width:  1000px;
+    height:40px;
+    top:50px;
+}

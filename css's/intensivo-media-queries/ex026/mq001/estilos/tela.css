@@ -1,0 +1,49 @@
+/*isso é para tela*/
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+header {
+    background-color: #1316b0;
+}
+header h1 {
+    text-align: center;
+    color: azure;
+}
+menu{
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+}
+menu ul{
+    list-style-type: none;
+    background-color: aliceblue;
+}
+menu li {
+    display: inline-block;
+    padding: 10px;
+    margin: 5px;
+    background-color: royalblue;
+    color: white;
+    border-radius: 10px;
+}
+li:hover{
+    background-color: aliceblue;
+    color: darkblue;
+    margin: 5px;
+    font-weight: 700;
+}
+
+article{ /*as duas primeiras configurações são para centralizar texto na pagina*/
+    margin: auto;
+    display: block;
+    width: 600px;
+}
+

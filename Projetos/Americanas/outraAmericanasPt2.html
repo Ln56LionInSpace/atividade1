@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .faixa-vermelha {
+            display: flex;
+            background-color: rgb(248, 0, 50);
+            height: 99px;
+            margin: 0;
+        }
+
+        #logo {
+            display: flex;
+            margin-left: 68px;
+            margin-top: -12px;
+            width: 210px;
+            align-self: center;
+        }
+
+        /*deixando um sobre outros*/
+        .componente {
+            display: block;
+        }
+
+        /*deixar todos mais deslocados da esquerda*/
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 23.5px;
+            margin-left: 500px;
+        }
+
+        /*edições de cabeçalho*/
+        .cabecalho {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        /*edições do rodape*/
+        .rodape {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #botao {
+            width: 140px;
+            height: 20px;
+            margin-left: 120px;
+            margin-bottom: 30px;
+        }
+
+        /*observação legal das compras rapidas e faceis*/
+        .cabecalho-observacao {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-align: center;
+            width: 310px;
+        }
+
+        #organizar-senha-esqueceu {
+            display: flex;
+            flex-direction: row;
+            gap: 155px;
+            margin-top: -7px;
+            margin-left: -1px;
+        }
+
+        #organizar-senha-esqueceu a {
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 400;
+            color: rgb(102, 102, 102);
+            font-family: 'Arial';
+            margin-top: 10px;
+            margin-left: -5px;
+        }
+
+        #input-email {
+            height: 40px;
+            border: 1px solid #ccc;
+            width: 360px;
+            margin-bottom: 20px;
+        }
+
+        #input-senha {
+            height: 40px;
+            border: 1px solid #ccc;
+            width: 360px;
+            margin-left: -1px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .cabecalho-titulo {
+            text-transform: lowercase;
+            font-size: 28px;
+            font-weight: 700;
+            font-family: 'Arial';
+            color: rgb(102, 102, 102);
+            margin-left: 33px;
+            margin-top: -1px;
+        }
+
+        .cabecalho-observacao {
+            text-transform: 'Arial';
+            color: rgb(102, 102, 102);
+            font-family: 'Arial';
+            font-weight: 400;
+            margin-top: 13px;
+            width: 350px;
+        }
+
+        .cabeca {
+            width: 10px;
+            height: 10px;
+            display: block;
+            position: absolute;
+            border-radius: 10px;
+            top: 131px;
+            left: 569.5px;
+            border: 3px solid #666;
+        }
+
+        .corpo {
+            width: 22px;
+            height: 9px;
+            display: block;
+            position: absolute;
+            border-radius: 11px 11px 2px 2px;
+            left: 564px;
+            top: 144px;
+            border: 3px solid #666;
+        }
+
+        #label-email {
+            color: rgb(102, 102, 102);
+            text-transform: lowercase;
+            font-family: 'Arial';
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 7px;
+        }
+
+        #label-senha {
+            color: rgb(102, 102, 102);
+            text-transform: lowercase;
+            font-family: 'Arial';
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 6px;
+            margin-top: 10px
+        }
+
+        #botao {
+            border-radius: 3px;
+            background-color: #e60014;
+            color: #ffffff;
+            border: 5px solid #e60014;
+            text-decoration: none;
+            text-transform: lowercase;
+            font-size: 16px;
+            width: 360px;
+            height: 43px;
+            font-family: 'Arial';
+            font-weight: 600;
+            display: absolute;
+            margin-left: 3px;
+            margin-bottom:40px;
+        }
+
+        #organizacao-rodape {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 3px;
+            margin-bottom: 20px;
+        }
+
+        .rodape-obs1 {
+            font-family: 'Arial';
+            font-size: 14px;
+            color: rgb(102, 102, 102);
+        }
+
+        .link-cadastre-se {
+            font-family: 'Arial';
+            font-size: 14px;
+            color: rgb(102, 102, 102);
+            text-decoration: none;
+            text-decoration: underline;
+        }
+
+        #organizacao-rodape-2 {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 3px;
+        }
+
+        .rodape-obs2 {
+            font-family: 'Arial';
+            font-size: 14px;
+            color: rgb(102, 102, 102);
+        }
+
+        .link-politica-privacidade {
+            font-family: 'Arial';
+            font-size: 14px;
+            color: rgb(102, 102, 102);
+            text-decoration: none;
+            text-decoration: underline;
+        }
+        .olho-senha{
+            position: absolute;
+            width: 35px;
+            margin-left: 315px;
+            margin-top:9px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="faixa-vermelha">
+        <img id="logo" src="./USEESSA.png" alt="#logoAmericanas">
+    </header>
+    <main>
+        <div class="cabeca">
+
+        </div>
+        <div class="corpo">
+
+        </div>
+        <section class="cabecalho">
+            <h1 class="cabecalho-titulo">login do cliente</h1>
+            <p class="cabecalho-observacao">
+                Veja seus pedidos de forma fácil, compre mais rápido e tenha uma experiência personalizada :)
+            </p>
+        </section>
+        <section>
+            <form action="iFrames.html" method="post">
+                <div class="campo">
+                    <label class="componente" id="label-email">e-mail:</label>
+                    <input class="componente" type="email" id="input-email" name="emailUsuario">
+                </div>
+                <div class="campo">
+                    <div id="organizar-senha-esqueceu">
+                        <label class="componente" id="label-senha">senha na americanas:</label>
+                        <a class="link-esqueceu" href="iFrames.html">esqueceu?</a>
+                    </div>
+                    <img class="olho-senha" src="./olho-senha.png" alt="">
+                    <input class="componente" type="password" id="input-senha" name="senhaUsuario">
+                </div>
+                <input value="continuar" id="botao" type="submit">
+            </form>
+        </section>
+    </main>
+    <footer class="rodape">
+        <div id="organizacao-rodape">
+            <p class="rodape-obs1">não tem cadastro?</p>
+            <a class="link-cadastre-se" href="TentandoDeNovo.html"> cadastre-se</a>
+        </div>
+        <div id="organizacao-rodape-2">
+            <p class="rodape-obs2">Ao continuar com o acesso, você concorda com a nossa </p>
+            <a class="link-politica-privacidade" href="outraAmericanasPoliticaPrivacidade.html">política
+                de privacidade</a>
+        </div>
+
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+Query
+- Define regra pra ser satisfeita para certo codigo ser carregado
+- Essas condições são colocadas no link de linkagem do css ao html
+    - se for "media=tv" codigo executa só em tv;
+    - se for "media=print" é um outro codigo css executado para quando usario quer imprimir a pagina
+    - e assim vai...
+- dentro de codigo css, posso colocar "@media screen and (max-width: 768px){}" que só executa codigo 
+  de dentro do colchete se eu estiver em tela onde a largura maxima é 768px;
+- operadores: not, and e only (not print = todas situações menor print(imprimir))
+- importante: width e height diem respeito ao browser, e device-width/device height dizem respeito
+  ao
+- orientation: portrait (de pé) e landscape (deitado)

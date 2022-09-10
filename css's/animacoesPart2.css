@@ -1,0 +1,35 @@
+.bola{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    display: block;
+}
+.quadrado{
+    background-color: aquamarine;
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+@keyframes minha-animacao{
+    0%{
+        transform: scale(0, .025);
+        background-color: royalblue;
+    }
+    25%{
+        transform: scale(1, .025);
+        background-color: green;
+    }
+    50%{
+        transform: scale(2, .125);
+        background-color: yellowgreen;
+    }
+}
+@media (prefers-reduced-motion: no-preference){
+    .bola{
+        animation-name: minha-animacao;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+}
+/*poderia ter colocado 2 s na animation-iteration-count, que iria repetir 2 vezes*/

@@ -40,3 +40,16 @@ Margin, padding e box
 
 - box é uma caixa visual, o padding é margem interna e a margin é mais externa, a distancia do objeto das paredes da tela
 - boxes são criados ao criar blocos de divs e sections
+
+(Sofrendo) com positions de html
+
+- Todo site de html segue fluxo de coluna, um conteudo embaixo do outro;
+- Positions:
+    - Static: segue fluxo normal do html, não faz nada;
+    - Relative: obedeece fluxo html, mas pode mudar as direções (top, left, right e bottom)
+    - Absolute: se usar relative como pai do absolute, aí posso organizar melhor tudo; usa de referencia a tela toda tb;
+    - FIxed: usa de base a propria tela e fica parado na tela;
+    - fica na tela mas acompanha o scrow quando este ultimo passa por ele
+- Inspecionando:
+    - Vai em compute => show all => position (no filtro)
+- Veja que absolute usado dentro do relative ajuda e muito a posicionar ele em relaçao ao relative

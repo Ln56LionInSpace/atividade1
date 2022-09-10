@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-box</title>
+    <style>
+        /*flex: row organiza elementos como se fosse em linha e o column em coluna*/
+        /*o que ativa o flexbox é o "display:flex"*/
+        /*Space around: espaço ao redor do conteiner, por isso ficam bem espaçados*/
+        /*Space evenly faz o espaço ficar estritamente igual mesmo nas diferenças entre bordas e camto da pagina*/
+        /*Space-Between: espaço somente entre os boxes, não distribui espaço nos cantos*/
+        /*Flex-end e flex-start pegam o inicio e estendem o conteudo ate o final*/
+        /*flex-reverse faz bloco inicial ir pro final, ou seja, 123 vira 321*/
+        #linha1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 900px;
+            background-color: #666;
+        }
+
+        #linha1>div {
+            width: 25%;
+            height: 200px;
+            background-color: aquamarine;
+        }
+
+        #linha>#spanSimula {
+            width: 25%;
+            height: 200px;
+            background-color: aquamarine;
+            align-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="linha1">
+        <div class="noticia">
+            <h3>Titulo 1</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, iusto quasi amet neque rerum obcaecati,
+                nam ullam error odit exercitationem odio quod dicta? Ab impedit pariatur ducimus quis, fuga delectus!
+            </p>
+        </div>
+        <div id="noticia2" class="noticia">
+            <h3>Titulo 2</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, iusto quasi amet neque rerum obcaecati,
+                nam ullam error odit exercitationem odio quod dicta? Ab impedit pariatur ducimus quis, fuga delectus!
+            </p>
+        </div>
+        <div class="noticia">
+            <h3>Titulo 3</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, iusto quasi amet neque rerum obcaecati,
+                nam ullam error odit exercitationem odio quod dicta? Ab impedit pariatur ducimus quis, fuga delectus!
+            </p>
+        </div>
+    </section>
+
+</body>
+
+</html>
